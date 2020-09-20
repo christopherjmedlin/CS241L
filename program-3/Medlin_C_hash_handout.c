@@ -40,13 +40,14 @@ int main( int argc, char *argv[] ) {
     
     if (i != strlen(theData) - 1) {
         hashCode <<= 4;
-	hashCode ^= leftMostFourBits;
+    	hashCode ^= leftMostFourBits;
     } 
   }
 
   /* CLOSING COMMENT   */
 
   printf ( "The hash of %s = %u\n", argv[1], hashCode );
+  printf ( "The hash of %s mod 11 = %u\n", argv[1], hashCode%11 );
 
   return 0;   // success code returned to Operating System
 }
